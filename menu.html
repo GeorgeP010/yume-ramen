@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Yume Ramen</title>
+    <link rel="stylesheet" href="menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Noto+Sans+JP:wght@700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <img src="img/Yume_logo.png" alt="Yume Ramen" class="loading-logo">
+    </div>
+
+    <nav>
+        <a href="index.html" class="nav-logo-link" aria-label="Yume Ramen Home">
+            <img src="img/Yume_logo.png" alt="Yume Ramen Logo" class="nav-logo">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="menu.html" class="active">MENU</a></li>
+            <li><a href="#">STORY</a></li>
+        </ul>
+
+        <a href="#" class="nav-btn">BESTELLEN</a>
+
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Fullscreen Menu Overlay -->
+    <div class="nav-menu-overlay" id="navMenuOverlay">
+        <img src="img/Yume_icon.png" alt="Yume Icon" class="nav-menu-icon">
+        <img src="img/Yume_logo.png" alt="Yume Logo" class="nav-menu-logo">
+        <img src="img/nav_foto.png" alt="Ramen Bowl" class="nav-menu-image">
+        <button class="nav-menu-close" id="navMenuClose">✕</button>
+        <nav class="fullscreen-nav">
+            <a href="index.html" class="nav-menu-link">HOME</a>
+            <a href="menu.html" class="nav-menu-link">MENU</a>
+            <a href="index.html#about" class="nav-menu-link">ABOUT</a>
+            <a href="#" class="nav-menu-link special">BESTELLEN</a>
+            <a href="#" class="nav-menu-link">GALLERY</a>
+            <a href="#" class="nav-menu-link">CONTACT</a>
+        </nav>
+
+        <div class="nav-menu-footer">
+            <div class="nav-menu-social">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+            </div>
+            <p class="nav-menu-info">夢 • Crafted in Rotterdam</p>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <div id="sakura-container"></div>
+    <div class="blue-glow"></div>
+
+    <section class="menu-hero">
+        <!-- Decoratieve afbeelding links boven -->
+        <div class="menu-decoration-image">
+            <img src="img/nav_foto3.png" alt="Ramen Bowl">
+        </div>
+
+        <!-- Decoratieve afbeelding rechts boven -->
+        <div class="menu-decoration-image-right">
+            <img src="img/nav_foto4.png" alt="Ramen Bowl">
+        </div>
+
+        <div class="container">
+            <div class="menu-header">
+                <p class="jp-label">メニュー</p>
+                <h1 class="menu-title">
+                    <span class="solid-text">ONS</span>
+                    <span class="outline-text">MENU</span>
+                </h1>
+                <p class="menu-subtitle">Ontdek onze authentieke ramen collectie</p>
+                <a href="img/yume_menukaart.pdf" target="_blank" class="download-menu-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    BEKIJK MENU
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-items">
+        <div class="container">
+
+            <!-- Menu Grid -->
+            <div class="menu-grid">
+
+                <!-- Menu Item 1 -->
+                <div class="menu-card"
+                    onclick="openDetail('Tonkotsu Ramen', 'img/ramen1.png', 12.90, 'Rijke varkensbouillon met noedels, chashu, ajitsuke tamago en nori', ['Ramen noedels', 'Chashu varkensvlees', 'Ajitsuke tamago', 'Nori zeewier', 'Lente-ui', 'Sesam'], 'POPULAIR')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Tonkotsu Ramen">
+                        <div class="card-badge">POPULAIR</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Tonkotsu Ramen</h3>
+                        <p class="card-description">Rijke varkensbouillon met noedels, chashu, ajitsuke tamago en nori
+                        </p>
+                        <div class="card-footer">
+                            <span class="card-price">€12,90</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Tonkotsu Ramen', 'img/ramen1.png', 12.90, 'Rijke varkensbouillon met noedels, chashu, ajitsuke tamago en nori', ['Ramen noedels', 'Chashu varkensvlees', 'Ajitsuke tamago', 'Nori zeewier', 'Lente-ui', 'Sesam'], 'POPULAIR')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 2 -->
+                <div class="menu-card"
+                    onclick="openDetail('Spicy Tantanmen', 'img/ramen1.png', 14.50, 'Pittige sesam bouillon met gehakt, paksoi en chili olie', ['Ramen noedels', 'Sesam bouillon', 'Gehakt', 'Paksoi', 'Chili olie', 'Sesamzaad'], 'EXTRA PIKANT')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Spicy Tantanmen">
+                        <div class="card-badge hot">EXTRA PIKANT</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Spicy Tantanmen</h3>
+                        <p class="card-description">Pittige sesam bouillon met gehakt, paksoi en chili olie</p>
+                        <div class="card-footer">
+                            <span class="card-price">€14,50</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Spicy Tantanmen', 'img/ramen1.png', 14.50, 'Pittige sesam bouillon met gehakt, paksoi en chili olie', ['Ramen noedels', 'Sesam bouillon', 'Gehakt', 'Paksoi', 'Chili olie', 'Sesamzaad'], 'EXTRA PIKANT')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 3 -->
+                <div class="menu-card"
+                    onclick="openDetail('Miso Ramen', 'img/ramen1.png', 13.50, 'Romige miso bouillon met maïs, bamboe en gemarineerd varkensvlees', ['Ramen noedels', 'Miso bouillon', 'Varkensvlees', 'Maïs', 'Bamboe', 'Gemarineerd ei'], '')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Miso Ramen">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Miso Ramen</h3>
+                        <p class="card-description">Romige miso bouillon met maïs, bamboe en gemarineerd varkensvlees
+                        </p>
+                        <div class="card-footer">
+                            <span class="card-price">€13,50</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Miso Ramen', 'img/ramen1.png', 13.50, 'Romige miso bouillon met maïs, bamboe en gemarineerd varkensvlees', ['Ramen noedels', 'Miso bouillon', 'Varkensvlees', 'Maïs', 'Bamboe', 'Gemarineerd ei'], '')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 4 -->
+                <div class="menu-card"
+                    onclick="openDetail('Shoyu Ramen', 'img/ramen1.png', 11.90, 'Klassieke sojasaus bouillon met kippenvlees en verse groenten', ['Ramen noedels', 'Kippenvlees', 'Sojasaus bouillon', 'Bamboe', 'Maïs', 'Lente-ui'], 'PIKANT')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Shoyu Ramen">
+                        <div class="card-badge hot">PIKANT</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Shoyu Ramen</h3>
+                        <p class="card-description">Klassieke sojasaus bouillon met kippenvlees en verse groenten</p>
+                        <div class="card-footer">
+                            <span class="card-price">€11,90</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Shoyu Ramen', 'img/ramen1.png', 11.90, 'Klassieke sojasaus bouillon met kippenvlees en verse groenten', ['Ramen noedels', 'Kippenvlees', 'Sojasaus bouillon', 'Bamboe', 'Maïs', 'Lente-ui'], 'PIKANT')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 5 -->
+                <div class="menu-card"
+                    onclick="openDetail('Vegetarische Ramen', 'img/ramen1.png', 11.50, 'Plantaardige bouillon met tofu, champignons en seizoensgroenten', ['Ramen noedels', 'Groentenbouillon', 'Tofu', 'Champignons', 'Groenten', 'Sesam'], 'VEGGIE')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Vegetarische Ramen">
+                        <div class="card-badge vegan">VEGGIE</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Vegetarische Ramen</h3>
+                        <p class="card-description">Plantaardige bouillon met tofu, champignons en seizoensgroenten</p>
+                        <div class="card-footer">
+                            <span class="card-price">€11,50</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Vegetarische Ramen', 'img/ramen1.png', 11.50, 'Plantaardige bouillon met tofu, champignons en seizoensgroenten', ['Ramen noedels', 'Groentenbouillon', 'Tofu', 'Champignons', 'Groenten', 'Sesam'], 'VEGGIE')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 6 -->
+                <div class="menu-card"
+                    onclick="openDetail('Draak Ramen', 'img/ramen1.png', 16.90, 'Chef special met zwarte knoflookolie, wagyu beef en truffelmayonaise', ['Ramen noedels', 'Premium bouillon', 'Wagyu beef', 'Zwarte knoflookolie', 'Truffelmayo', 'Microgreens'], 'SPECIAL')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Draak Ramen">
+                        <div class="card-badge special">SPECIAL</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Draak Ramen</h3>
+                        <p class="card-description">Chef's special met zwarte knoflookolie, wagyu beef en
+                            truffelmayonaise</p>
+                        <div class="card-footer">
+                            <span class="card-price">€16,90</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Draak Ramen', 'img/ramen1.png', 16.90, 'Chef special met zwarte knoflookolie, wagyu beef en truffelmayonaise', ['Ramen noedels', 'Premium bouillon', 'Wagyu beef', 'Zwarte knoflookolie', 'Truffelmayo', 'Microgreens'], 'SPECIAL')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 7 -->
+                <div class="menu-card"
+                    onclick="openDetail('Shio Ramen', 'img/ramen1.png', 12.50, 'Heldere zoutbouillon met kippenvlees, bamboescheuten en wakame', ['Ramen noedels', 'Zoutbouillon', 'Kippenvlees', 'Bamboescheuten', 'Wakame zeewier', 'Gemarineerd ei'], '')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Shio Ramen">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Shio Ramen</h3>
+                        <p class="card-description">Heldere zoutbouillon met kippenvlees, bamboescheuten en wakame</p>
+                        <div class="card-footer">
+                            <span class="card-price">€12,50</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Shio Ramen', 'img/ramen1.png', 12.50, 'Heldere zoutbouillon met kippenvlees, bamboescheuten en wakame', ['Ramen noedels', 'Zoutbouillon', 'Kippenvlees', 'Bamboescheuten', 'Wakame zeewier', 'Gemarineerd ei'], '')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 8 -->
+                <div class="menu-card"
+                    onclick="openDetail('Kara Miso Ramen', 'img/ramen1.png', 14.90, 'Pittige miso bouillon met gehakt, knoflook en rode peper', ['Ramen noedels', 'Pittige miso', 'Gehakt', 'Knoflook', 'Rode peper', 'Kikurage paddenstoelen'], 'EXTRA PIKANT')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Kara Miso Ramen">
+                        <div class="card-badge hot">EXTRA PIKANT</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Kara Miso Ramen</h3>
+                        <p class="card-description">Pittige miso bouillon met gehakt, knoflook en rode peper</p>
+                        <div class="card-footer">
+                            <span class="card-price">€14,90</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Kara Miso Ramen', 'img/ramen1.png', 14.90, 'Pittige miso bouillon met gehakt, knoflook en rode peper', ['Ramen noedels', 'Pittige miso', 'Gehakt', 'Knoflook', 'Rode peper', 'Kikurage paddenstoelen'], 'EXTRA PIKANT')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 9 -->
+                <div class="menu-card"
+                    onclick="openDetail('Tsukemen', 'img/ramen1.png', 13.90, 'Dip ramen met dikke noedels en geconcentreerde bouillon', ['Dikke noedels', 'Dip bouillon', 'Chashu', 'Gemarineerd ei', 'Nori', 'Lente-ui'], '')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Tsukemen">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Tsukemen</h3>
+                        <p class="card-description">Dip ramen met dikke noedels en geconcentreerde bouillon</p>
+                        <div class="card-footer">
+                            <span class="card-price">€13,90</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Tsukemen', 'img/ramen1.png', 13.90, 'Dip ramen met dikke noedels en geconcentreerde bouillon', ['Dikke noedels', 'Dip bouillon', 'Chashu', 'Gemarineerd ei', 'Nori', 'Lente-ui'], '')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 10 -->
+                <div class="menu-card"
+                    onclick="openDetail('Seafood Ramen', 'img/ramen1.png', 15.50, 'Zeevruchten bouillon met garnalen, mosselen en inktvis', ['Ramen noedels', 'Zeevruchten bouillon', 'Garnalen', 'Mosselen', 'Inktvis', 'Lente-ui'], '')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Seafood Ramen">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Seafood Ramen</h3>
+                        <p class="card-description">Zeevruchten bouillon met garnalen, mosselen en inktvis</p>
+                        <div class="card-footer">
+                            <span class="card-price">€15,50</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Seafood Ramen', 'img/ramen1.png', 15.50, 'Zeevruchten bouillon met garnalen, mosselen en inktvis', ['Ramen noedels', 'Zeevruchten bouillon', 'Garnalen', 'Mosselen', 'Inktvis', 'Lente-ui'], '')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 11 -->
+                <div class="menu-card"
+                    onclick="openDetail('Curry Ramen', 'img/ramen1.png', 13.90, 'Japanse curry bouillon met varkensvlees en groenten', ['Ramen noedels', 'Curry bouillon', 'Varkensvlees', 'Wortel', 'Aardappel', 'Ui'], '')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Curry Ramen">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Curry Ramen</h3>
+                        <p class="card-description">Japanse curry bouillon met varkensvlees en groenten</p>
+                        <div class="card-footer">
+                            <span class="card-price">€13,90</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Curry Ramen', 'img/ramen1.png', 13.90, 'Japanse curry bouillon met varkensvlees en groenten', ['Ramen noedels', 'Curry bouillon', 'Varkensvlees', 'Wortel', 'Aardappel', 'Ui'], '')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 12 -->
+                <div class="menu-card"
+                    onclick="openDetail('Black Garlic Tonkotsu', 'img/ramen1.png', 14.90, 'Premium tonkotsu met zwarte knoflookolie en extra chashu', ['Ramen noedels', 'Premium tonkotsu', 'Extra chashu', 'Zwarte knoflookolie', 'Ajitsuke tamago', 'Kikurage'], 'POPULAIR')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Black Garlic Tonkotsu">
+                        <div class="card-badge">POPULAIR</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Black Garlic Tonkotsu</h3>
+                        <p class="card-description">Premium tonkotsu met zwarte knoflookolie en extra chashu</p>
+                        <div class="card-footer">
+                            <span class="card-price">€14,90</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Black Garlic Tonkotsu', 'img/ramen1.png', 14.90, 'Premium tonkotsu met zwarte knoflookolie en extra chashu', ['Ramen noedels', 'Premium tonkotsu', 'Extra chashu', 'Zwarte knoflookolie', 'Ajitsuke tamago', 'Kikurage'], 'POPULAIR')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bijgerechten Section -->
+            <div class="menu-section-title">
+                <h2><span class="solid-text">BIJ</span><span class="outline-text">GERECHTEN</span></h2>
+            </div>
+
+            <div class="menu-grid">
+
+                <!-- Bijgerecht 1 -->
+                <div class="menu-card"
+                    onclick="openDetail('Gyoza', 'img/ramen1.png', 6.50, 'Japanse dumplings gevuld met varkensvlees en groenten (6 stuks)', ['Varkensvlees', 'Kool', 'Knoflook', 'Gember', 'Sojasaus', 'Sesamolie'], '')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Gyoza">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Gyoza</h3>
+                        <p class="card-description">Japanse dumplings gevuld met varkensvlees en groenten (6 stuks)</p>
+                        <div class="card-footer">
+                            <span class="card-price">€6,50</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Gyoza', 'img/ramen1.png', 6.50, 'Japanse dumplings gevuld met varkensvlees en groenten (6 stuks)', ['Varkensvlees', 'Kool', 'Knoflook', 'Gember', 'Sojasaus', 'Sesamolie'], '')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bijgerecht 2 -->
+                <div class="menu-card"
+                    onclick="openDetail('Edamame', 'img/ramen1.png', 4.50, 'Gestoomde sojabonen met zeezout', ['Sojabonen', 'Zeezout'], 'VEGGIE')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Edamame">
+                        <div class="card-badge vegan">VEGGIE</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Edamame</h3>
+                        <p class="card-description">Gestoomde sojabonen met zeezout</p>
+                        <div class="card-footer">
+                            <span class="card-price">€4,50</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Edamame', 'img/ramen1.png', 4.50, 'Gestoomde sojabonen met zeezout', ['Sojabonen', 'Zeezout'], 'VEGGIE')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bijgerecht 3 -->
+                <div class="menu-card"
+                    onclick="openDetail('Takoyaki', 'img/ramen1.png', 7.50, 'Octopus balletjes met bonito en takoyaki saus (6 stuks)', ['Octopus', 'Beslag', 'Bonito vlokken', 'Takoyaki saus', 'Mayonaise', 'Nori'], '')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Takoyaki">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Takoyaki</h3>
+                        <p class="card-description">Octopus balletjes met bonito en takoyaki saus (6 stuks)</p>
+                        <div class="card-footer">
+                            <span class="card-price">€7,50</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Takoyaki', 'img/ramen1.png', 7.50, 'Octopus balletjes met bonito en takoyaki saus (6 stuks)', ['Octopus', 'Beslag', 'Bonito vlokken', 'Takoyaki saus', 'Mayonaise', 'Nori'], '')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bijgerecht 4 -->
+                <div class="menu-card"
+                    onclick="openDetail('Karaage', 'img/ramen1.png', 7.90, 'Japanse gefrituurde kip met citroen', ['Kippendijen', 'Gember', 'Knoflook', 'Sojasaus', 'Sake', 'Citroen'], '')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Karaage">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Karaage</h3>
+                        <p class="card-description">Japanse gefrituurde kip met citroen</p>
+                        <div class="card-footer">
+                            <span class="card-price">€7,90</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Karaage', 'img/ramen1.png', 7.90, 'Japanse gefrituurde kip met citroen', ['Kippendijen', 'Gember', 'Knoflook', 'Sojasaus', 'Sake', 'Citroen'], '')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bijgerecht 5 -->
+                <div class="menu-card"
+                    onclick="openDetail('Kimchi', 'img/ramen1.png', 5.50, 'Gefermenteerde pittige kool', ['Chinese kool', 'Rode peper', 'Knoflook', 'Gember', 'Vissaus'], 'PIKANT')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Kimchi">
+                        <div class="card-badge hot">PIKANT</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Kimchi</h3>
+                        <p class="card-description">Gefermenteerde pittige kool</p>
+                        <div class="card-footer">
+                            <span class="card-price">€5,50</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Kimchi', 'img/ramen1.png', 5.50, 'Gefermenteerde pittige kool', ['Chinese kool', 'Rode peper', 'Knoflook', 'Gember', 'Vissaus'], 'PIKANT')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bijgerecht 6 -->
+                <div class="menu-card"
+                    onclick="openDetail('Chashu Bun', 'img/ramen1.png', 8.50, 'Gestoomde bao bun met gemarineerd varkensvlees', ['Bao broodje', 'Chashu', 'Komkommer', 'Lente-ui', 'Hoisin saus', 'Sesamzaad'], '')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Chashu Bun">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Chashu Bun</h3>
+                        <p class="card-description">Gestoomde bao bun met gemarineerd varkensvlees</p>
+                        <div class="card-footer">
+                            <span class="card-price">€8,50</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Chashu Bun', 'img/ramen1.png', 8.50, 'Gestoomde bao bun met gemarineerd varkensvlees', ['Bao broodje', 'Chashu', 'Komkommer', 'Lente-ui', 'Hoisin saus', 'Sesamzaad'], '')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Dranken Section -->
+            <div class="menu-section-title">
+                <h2><span class="solid-text">DRAN</span><span class="outline-text">KEN</span></h2>
+            </div>
+
+            <div class="menu-grid">
+
+                <!-- Drank 1 -->
+                <div class="menu-card"
+                    onclick="openDetail('Ramune', 'img/ramen1.png', 3.50, 'Japanse frisdrank met knikker', ['Koolzuurhoudend water', 'Suiker', 'Smaakstoffen'], '')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Ramune">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Ramune</h3>
+                        <p class="card-description">Japanse frisdrank met knikker</p>
+                        <div class="card-footer">
+                            <span class="card-price">€3,50</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Ramune', 'img/ramen1.png', 3.50, 'Japanse frisdrank met knikker', ['Koolzuurhoudend water', 'Suiker', 'Smaakstoffen'], '')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drank 2 -->
+                <div class="menu-card"
+                    onclick="openDetail('Frisdrank', 'img/ramen1.png', 2.50, 'Keuze uit: Coca Cola, Fanta, Sprite, Ice Tea, Cassis', ['Verschillende smaken beschikbaar'], '')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Frisdrank">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Frisdrank</h3>
+                        <p class="card-description">Keuze uit: Coca Cola, Fanta, Sprite, Ice Tea, Cassis</p>
+                        <div class="card-footer">
+                            <span class="card-price">€2,50</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Frisdrank', 'img/ramen1.png', 2.50, 'Keuze uit: Coca Cola, Fanta, Sprite, Ice Tea, Cassis', ['Verschillende smaken beschikbaar'], '')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drank 3 -->
+                <div class="menu-card"
+                    onclick="openDetail('Asahi Bier', 'img/ramen1.png', 4.50, 'Premium Japans lager bier (33cl)', ['Gerstemout', 'Hop', 'Rijst', 'Water'], '')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Asahi Bier">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Asahi Bier</h3>
+                        <p class="card-description">Premium Japans lager bier (33cl)</p>
+                        <div class="card-footer">
+                            <span class="card-price">€4,50</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Asahi Bier', 'img/ramen1.png', 4.50, 'Premium Japans lager bier (33cl)', ['Gerstemout', 'Hop', 'Rijst', 'Water'], '')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drank 4 -->
+                <div class="menu-card"
+                    onclick="openDetail('Calpis', 'img/ramen1.png', 3.50, 'Zoete Japanse yoghurt drank', ['Melk', 'Suiker', 'Melkzuur bacteriën'], '')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Calpis">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Calpis</h3>
+                        <p class="card-description">Zoete Japanse yoghurt drank</p>
+                        <div class="card-footer">
+                            <span class="card-price">€3,50</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Calpis', 'img/ramen1.png', 3.50, 'Zoete Japanse yoghurt drank', ['Melk', 'Suiker', 'Melkzuur bacteriën'], '')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drank 5 -->
+                <div class="menu-card"
+                    onclick="openDetail('Sake', 'img/ramen1.png', 6.50, 'Traditionele Japanse rijstwijn (warm of koud)', ['Rijst', 'Water', 'Koji', 'Gist'], '')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Sake">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Sake</h3>
+                        <p class="card-description">Traditionele Japanse rijstwijn (warm of koud)</p>
+                        <div class="card-footer">
+                            <span class="card-price">€6,50</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Sake', 'img/ramen1.png', 6.50, 'Traditionele Japanse rijstwijn (warm of koud)', ['Rijst', 'Water', 'Koji', 'Gist'], '')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drank 6 -->
+                <div class="menu-card"
+                    onclick="openDetail('Matcha Latte', 'img/ramen1.png', 4.50, 'Romige matcha thee met melk', ['Matcha poeder', 'Melk', 'Suiker'], '')">
+                    <div class="card-image">
+                        <img src="img/ramen1.png" alt="Matcha Latte">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Matcha Latte</h3>
+                        <p class="card-description">Romige matcha thee met melk</p>
+                        <div class="card-footer">
+                            <span class="card-price">€4,50</span>
+                            <button class="view-details"
+                                onclick="event.stopPropagation(); openDetail('Matcha Latte', 'img/ramen1.png', 4.50, 'Romige matcha thee met melk', ['Matcha poeder', 'Melk', 'Suiker'], '')">DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Winkelwagen Float Button -->
+    <div class="cart-float" id="cartFloat" onclick="toggleCart()">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-count" id="cartCount">0</span>
+    </div>
+
+    <!-- Winkelwagen Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Je Bestelling</h3>
+            <button class="cart-close" onclick="toggleCart()">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Je winkelwagen is leeg</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-free-delivery" id="cartFreeDelivery">
+                <div class="cart-free-delivery-text">
+                    Voeg €<span id="cartFreeAmount">0,00</span> toe voor gratis bezorging!
+                </div>
+                <div class="cart-progress-bar">
+                    <div class="cart-progress-fill" id="cartProgressFill"></div>
+                </div>
+            </div>
+            <div class="cart-totals">
+                <div class="cart-total-row">
+                    <span>Subtotaal:</span>
+                    <span id="cartSubtotal">€0,00</span>
+                </div>
+                <div class="cart-total-row">
+                    <span>Bezorging:</span>
+                    <span id="cartDelivery">€2,50</span>
+                </div>
+                <div class="cart-total-row cart-total-main">
+                    <span>TOTAAL:</span>
+                    <span id="cartTotal">€0,00</span>
+                </div>
+            </div>
+            <a href="checkout.php" class="checkout-btn">BESTELLEN</a>
+        </div>
+    </div>
+
+    <!-- Detail Modal -->
+    <div class="detail-modal" id="detailModal">
+        <div class="detail-content">
+            <button class="detail-close" onclick="closeDetail()">✕</button>
+            <div class="detail-grid">
+                <div class="detail-image">
+                    <img id="detailImage" src="" alt="">
+                </div>
+                <div class="detail-info">
+                    <div class="detail-header">
+                        <h2 class="detail-title" id="detailTitle"></h2>
+                        <p class="detail-price" id="detailPrice"></p>
+                    </div>
+                    <p class="detail-description" id="detailDescription"></p>
+                    <div class="detail-ingredients">
+                        <h3>Ingrediënten</h3>
+                        <div class="ingredients-list" id="ingredientsList"></div>
+                    </div>
+                    <div class="detail-actions">
+                        <div class="quantity-control">
+                            <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                            <span class="quantity-value" id="quantityValue">1</span>
+                            <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addFromDetail()">Toevoegen aan winkelwagen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="menu.js"></script>
+</body>
+
+</html>
