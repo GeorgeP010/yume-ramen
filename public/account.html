@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn Account - Yume Ramen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="account.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo-link" aria-label="Yume Ramen Home">
+            <img src="img/Yume_logo.png" alt="Yume Ramen Logo" class="nav-logo">
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+
+        <a href="#" class="nav-btn">BESTELLEN</a>
+        
+        <!-- Account Icon -->
+        <a href="account.html" class="account-icon active" aria-label="Account">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+        </a>
+        
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Fullscreen Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <img src="img/Yume_icon.png" alt="Yume Icon" class="menu-icon">
+        <img src="img/Yume_logo.png" alt="Yume Logo" class="menu-logo">
+        <img src="img/nav_foto.png" alt="Ramen Bowl" class="menu-image">
+        <button class="menu-close" id="menuClose">✕</button>
+        <nav class="fullscreen-nav">
+            <a href="index.html" class="menu-link">HOME</a>
+            <a href="menu.html" class="menu-link">MENU</a>
+            <a href="about.html" class="menu-link">ABOUT</a>
+            <a href="contact.html" class="menu-link">CONTACT</a>
+            <a href="account.html" class="menu-link active">ACCOUNT</a>
+        </nav>
+        
+        <div class="menu-footer">
+            <div class="menu-social">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+            </div>
+            <p class="menu-info">夢 • Crafted in Rotterdam</p>
+        </div>
+    </div>
+
+    <!-- Account Container -->
+    <div class="account-container">
+        <div class="bg-kanji-account">夢</div>
+
+        <!-- Login/Register Section (Shown when not logged in) -->
+        <div class="auth-section" id="authSection">
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Inloggen</button>
+                <button class="auth-tab" data-tab="register">Registreren</button>
+            </div>
+
+            <!-- Login Form -->
+            <div class="auth-form active" id="loginForm">
+                <h2>Welkom Terug!</h2>
+                <p class="auth-subtitle">Log in om je bestellingen te bekijken</p>
+                
+                <form id="loginFormElement">
+                    <div class="form-group">
+                        <label for="loginEmail">E-mailadres</label>
+                        <input type="email" id="loginEmail" required placeholder="voorbeeld@email.nl" autocomplete="email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="loginPassword">Wachtwoord</label>
+                        <input type="password" id="loginPassword" required placeholder="••••••••" autocomplete="current-password">
+                    </div>
+                    
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="rememberMe">
+                            <span>Onthoud mij</span>
+                        </label>
+                        <a href="#" class="forgot-password">Wachtwoord vergeten?</a>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Inloggen</button>
+                    
+                    <p class="error-message" id="loginError"></p>
+                    
+                    <div class="auth-divider">
+                        <span>of</span>
+                    </div>
+                    
+                    <p class="auth-hint">Test: test@test.nl / test</p>
+                </form>
+            </div>
+
+            <!-- Register Form -->
+            <div class="auth-form" id="registerForm">
+                <h2>Maak een Account</h2>
+                <p class="auth-subtitle">Word lid van de Yume familie</p>
+                
+                <form id="registerFormElement">
+                    <div class="form-group">
+                        <label for="registerName">Naam</label>
+                        <input type="text" id="registerName" required placeholder="Je volledige naam">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="registerEmail">E-mailadres</label>
+                        <input type="email" id="registerEmail" required placeholder="voorbeeld@email.nl">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="registerPassword">Wachtwoord</label>
+                        <input type="password" id="registerPassword" required placeholder="Minimaal 6 tekens">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="registerPasswordConfirm">Bevestig Wachtwoord</label>
+                        <input type="password" id="registerPasswordConfirm" required placeholder="Herhaal je wachtwoord">
+                    </div>
+                    
+                    <label class="checkbox-label" style="margin-bottom: 20px;">
+                        <input type="checkbox" id="acceptTerms" required>
+                        <span>Ik ga akkoord met de voorwaarden</span>
+                    </label>
+                    
+                    <button type="submit" class="btn-primary">Account Aanmaken</button>
+                    
+                    <p class="error-message" id="registerError"></p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Profile Section (Shown when logged in) -->
+        <div class="profile-section hidden" id="profileSection">
+            
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="profile-avatar-container">
+                    <img id="userAvatar" src="" alt="Avatar" class="profile-avatar">
+                    <button class="change-avatar-btn" id="changeAvatarBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                            <circle cx="12" cy="13" r="4"></circle>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="profile-info">
+                    <h1 id="userName">Gebruiker</h1>
+                    <p id="userEmail">email@example.com</p>
+                    <span class="member-badge">夢 YUME MEMBER</span>
+                </div>
+
+                <button class="logout-btn" id="logoutBtn">Uitloggen</button>
+            </div>
+
+            <!-- Avatar Selection Modal -->
+            <div class="avatar-modal hidden" id="avatarModal">
+                <div class="avatar-modal-content">
+                    <button class="modal-close" id="closeAvatarModal">✕</button>
+                    <h2>Kies je Avatar</h2>
+                    <p class="modal-subtitle">Selecteer een anime karakter</p>
+                    
+                    <div class="avatar-grid" id="avatarGrid">
+                        <!-- Avatars worden hier dynamisch toegevoegd -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Tabs -->
+            <div class="profile-tabs">
+                <button class="profile-tab active" data-tab="orders">Mijn Bestellingen</button>
+                <button class="profile-tab" data-tab="info">Account Info</button>
+                <button class="profile-tab" data-tab="favorites">Favorieten</button>
+            </div>
+
+            <!-- Profile Content -->
+            <div class="profile-content">
+                
+                <!-- Orders Tab -->
+                <div class="profile-tab-content active" id="ordersTab">
+                    <div class="orders-header">
+                        <h2>Mijn Bestellingen</h2>
+                        <div class="order-filters">
+                            <button class="filter-btn active" data-filter="all">Alle</button>
+                            <button class="filter-btn" data-filter="active">Actief</button>
+                            <button class="filter-btn" data-filter="completed">Afgerond</button>
+                        </div>
+                    </div>
+                    
+                    <div class="orders-list" id="ordersList">
+                        <!-- Orders worden hier dynamisch toegevoegd -->
+                    </div>
+                </div>
+
+                <!-- Account Info Tab -->
+                <div class="profile-tab-content" id="infoTab">
+                    <h2>Account Informatie</h2>
+                    
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <h3>Persoonlijke Gegevens</h3>
+                            <div class="info-row">
+                                <span class="info-label">Naam:</span>
+                                <span class="info-value" id="infoName">-</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">E-mail:</span>
+                                <span class="info-value" id="infoEmail">-</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Lid sinds:</span>
+                                <span class="info-value" id="memberSince">-</span>
+                            </div>
+                            <button class="btn-secondary">Bewerken</button>
+                        </div>
+
+                        <div class="info-card">
+                            <h3>Bezorgadres</h3>
+                            <div class="info-row">
+                                <span class="info-label">Adres:</span>
+                                <span class="info-value" id="address">Nog niet ingesteld</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Postcode:</span>
+                                <span class="info-value" id="zipcode">-</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Stad:</span>
+                                <span class="info-value" id="city">-</span>
+                            </div>
+                            <button class="btn-secondary">Toevoegen</button>
+                        </div>
+
+                        <div class="info-card">
+                            <h3>Statistieken</h3>
+                            <div class="info-row">
+                                <span class="info-label">Totaal besteld:</span>
+                                <span class="info-value highlight" id="totalOrders">0</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Favoriete gerecht:</span>
+                                <span class="info-value" id="favoriteDish">-</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Punten:</span>
+                                <span class="info-value highlight" id="points">0 🌸</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Favorites Tab -->
+                <div class="profile-tab-content" id="favoritesTab">
+                    <h2>Mijn Favorieten</h2>
+                    <div class="favorites-grid" id="favoritesList">
+                        <p class="empty-state">Je hebt nog geen favorieten toegevoegd</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="script.js"></script>
+    <script src="js/account.js"></script>
+    <script src="account.js"></script>
+</body>
+</html>

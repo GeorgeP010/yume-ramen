@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Yume Ramen</title>
+    <link rel="icon" type="image/png" href="img/Yume_icon.png">
+    <link rel="shortcut icon" type="image/png" href="img/Yume_icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Loading Screen -->
+<div class="loading-screen" id="loadingScreen">
+    <img src="img/Yume_logo.png" alt="Yume Ramen" class="loading-logo">
+</div>
+<nav>
+    <a href="index.html" class="nav-logo-link" aria-label="Yume Ramen Home">
+        <img src="img/Yume_logo.png" alt="Yume Ramen Logo" class="nav-logo">
+    </a>
+    
+    <ul class="nav-links">
+        <li><a href="index.html" class="">HOME</a></li>
+        <li><a href="menu.html" class="">MENU</a></li>
+        <li><a href="about.html" class="">ABOUT</a></li>
+        <li><a href="contact.html" class="active">CONTACT</a></li>
+    </ul>
+
+    <a href="menu.html" class="nav-btn">BESTELLEN</a>
+
+    <!-- Account Icon -->
+    <a href="account.html" class="account-icon " aria-label="Account">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+    </a>
+    
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</nav>
+
+<!-- Fullscreen Menu Overlay -->
+<div class="menu-overlay" id="menuOverlay">
+    <img src="img/Yume_icon.png" alt="Yume Icon" class="menu-icon">
+    <img src="img/Yume_logo.png" alt="Yume Logo" class="menu-logo">
+    <img src="img/nav_foto.png" alt="Ramen Bowl" class="menu-image">
+    <button class="menu-close" id="menuClose">✕</button>
+    <nav class="fullscreen-nav">
+        <a href="index.html" class="menu-link ">HOME</a>
+        <a href="menu.html" class="menu-link ">MENU</a>
+        <a href="about.html" class="menu-link ">ABOUT</a>
+        <a href="contact.html" class="menu-link active">CONTACT</a>
+        <a href="account.html" class="menu-link ">ACCOUNT</a>
+    </nav>
+    
+    <div class="menu-footer">
+        <div class="menu-social">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+        </div>
+        <p class="menu-info">夢 • Crafted in Rotterdam</p>
+    </div>
+</div>
+
+
+
+<!-- Contact Hero Section -->
+<section class="contact-hero">
+    <div class="contact-hero-content">
+        <span class="contact-hero-label">お問い合わせ</span>
+        <h1 class="contact-hero-title">
+            <span class="solid-text">CONTACT</span><br>
+            <span class="outline-text">ONS</span>
+        </h1>
+        <p class="contact-hero-subtitle">Neem contact met ons op</p>
+    </div>
+</section>
+
+<!-- Contact Main Section -->
+<section class="contact-main">
+    <div class="contact-container">
+        <!-- Contact Info & Form Grid -->
+        <div class="contact-grid">
+            <!-- Left: Contact Information -->
+            <div class="contact-info">
+                <h2 class="contact-section-title">- CONTACTGEGEVENS -</h2>
+                
+                <div class="contact-details">
+                    <div class="contact-detail-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-detail-text">
+                            <h3>Adres</h3>
+                            <p>Heer Bokelweg 255</p>
+                            <p>3032 AD Rotterdam</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-detail-text">
+                            <h3>Telefoon</h3>
+                            <p>010 123 4567</p>
+                            <p class="contact-note">Voor reserveringen: +31 10 123 4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-detail-text">
+                            <h3>Email</h3>
+                            <p>info@yumeramen.nl</p>
+                            <p class="contact-note">(niet voor reserveringen)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail-item">
+                        <div class="contact-icon">🕐</div>
+                        <div class="contact-detail-text">
+                            <h3>Openingstijden</h3>
+                            <div class="opening-hours-list">
+                                <div class="hours-row">
+                                    <span>Maandag - Vrijdag</span>
+                                    <span>11:00 - 22:00</span>
+                                </div>
+                                <div class="hours-row">
+                                    <span>Zaterdag - Zondag</span>
+                                    <span>12:00 - 23:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right: Contact Form -->
+            <div class="contact-form-wrapper">
+                <h2 class="contact-section-title">- STUUR ONS EEN BERICHT -</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Naam *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Telefoon</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Onderwerp *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Selecteer een onderwerp</option>
+                            <option value="reservation">Reservering</option>
+                            <option value="question">Vraag</option>
+                            <option value="complaint">Klacht</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Anders</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Bericht *</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">VERSTUUR</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Map Section -->
+        <div class="contact-map-section">
+            <h2 class="contact-section-title">- VIND ONS -</h2>
+            <div class="contact-map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2460.5426574638856!2d4.527820976947392!3d51.941937171876556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c433c4f0c0b7f7%3A0x6c0c0c0c0c0c0c0!2sHeer%20Bokelweg%20255%2C%203032%20AD%20Rotterdam!5e0!3m2!1snl!2snl!4v1234567890123!5m2!1snl!2snl" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Heer+Bokelweg+255+Rotterdam" target="_blank" class="btn-primary">ROUTEBESCHRIJVING</a>
+        </div>
+    </div>
+</section>
+
+<!-- Winkelwagen Float Button (zelfde als op home/menu) -->
+<div class="cart-float" id="cartFloat" onclick="toggleCart()">
+    <span class="cart-icon">🛒</span>
+    <span class="cart-count" id="cartCount">0</span>
+</div>
+
+<!-- Winkelwagen Sidebar (gedeelde cart) -->
+<div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+        <h3>Je Bestelling</h3>
+        <button class="cart-close" onclick="toggleCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+        <p class="empty-cart">Je winkelwagen is leeg</p>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-free-delivery" id="cartFreeDelivery">
+            <div class="cart-free-delivery-text">
+                Voeg €<span id="cartFreeAmount">0,00</span> toe voor gratis bezorging!
+            </div>
+            <div class="cart-progress-bar">
+                <div class="cart-progress-fill" id="cartProgressFill"></div>
+            </div><footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo-column">
+            <img src="img/Yume_logo.png" alt="Yume Ramen" class="footer-logo">
+        </div>
+        
+        <div class="footer-column">
+            <h4>NAVIGATION</h4>
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="menu.html">MENU</a>
+            <a href="#">DELIVERY</a>
+            <a href="#">JOBS</a>
+            <a href="#">LOYALTY & GIFTCARD</a>
+            <a href="#">WEBSHOP</a>
+            <a href="#">LOCATIONS</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="account.html">BECOME A MEMBER</a>
+        </div>
+        
+        <div class="footer-column">
+            <h4>CONTACT</h4>
+            <p>Witte de Withstraat 123</p>
+            <p>3012 BR Rotterdam</p>
+            <p>+31 10 316 3190</p>
+            <p>info@yumeramen.nl <span class="footer-note">(not for reservations)</span></p>
+            <p style="margin-top: 20px;">For reservations: +31 10 316 3190</p>
+        </div>
+        
+        <div class="footer-column">
+            <h4>HOURS</h4>
+            <div class="opening-hours">
+                <div class="hours-row">
+                    <span>Monday</span>
+                    <span>12:00 - 21:30</span>
+                </div>
+                <div class="hours-row">
+                    <span>Tuesday</span>
+                    <span>12:00 - 21:30</span>
+                </div>
+                <div class="hours-row">
+                    <span>Wednesday</span>
+                    <span>12:00 - 21:30</span>
+                </div>
+                <div class="hours-row">
+                    <span>Thursday</span>
+                    <span>12:00 - 21:30</span>
+                </div>
+                <div class="hours-row">
+                    <span>Friday</span>
+                    <span>12:00 - 22:00</span>
+                </div>
+                <div class="hours-row">
+                    <span>Saturday</span>
+                    <span>12:00 - 22:00</span>
+                </div>
+                <div class="hours-row">
+                    <span>Sunday</span>
+                    <span>12:00 - 21:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>© 2025 Yume Ramen Noodles | Rotterdam.</p>
+        <p class="footer-credit">Site built by The Pixel Bakery</p>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/cart.js"></script>
+
+<script>
+document.getElementById("contactForm")?.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    if (!formData.get("name") || !formData.get("email") || !formData.get("message")) {
+        alert("Vul alle verplichte velden in");
+        return;
+    }
+    alert("Bedankt voor je bericht! We nemen zo snel mogelijk contact met je op.");
+    this.reset();
+});
+</script>
+</body>
+</html>

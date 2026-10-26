@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Yume Ramen, bestel de lekkerste ramen van Rotterdam.">
     <title>Yume Ramen</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Noto+Sans+JP:wght@700&display=swap"
         rel="stylesheet">
@@ -24,9 +25,10 @@
         </a>
 
         <ul class="nav-links">
-            <li><a href="#">HOME</a></li>
+            <li><a href="index.html" class="active">HOME</a></li>
             <li><a href="menu.html">MENU</a></li>
-            <li><a href="#">STORY</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
         </ul>
 
         <a href="#" class="nav-btn">BESTELLEN</a>
@@ -54,12 +56,11 @@
         <img src="img/nav_foto.png" alt="Ramen Bowl" class="menu-image">
         <button class="menu-close" id="menuClose">✕</button>
         <nav class="fullscreen-nav">
-            <a href="index.html" class="menu-link">HOME</a>
+            <a href="index.html" class="menu-link active">HOME</a>
             <a href="menu.html" class="menu-link">MENU</a>
-            <a href="#about" class="menu-link">ABOUT</a>
-            <a href="#" class="menu-link special">BESTELLEN</a>
-            <a href="#" class="menu-link">GALLERY</a>
-            <a href="#" class="menu-link">CONTACT</a>
+            <a href="about.html" class="menu-link">ABOUT</a>
+            <a href="contact.html" class="menu-link">CONTACT</a>
+            <a href="account.html" class="menu-link">ACCOUNT</a>
         </nav>
 
         <div class="menu-footer">
@@ -169,6 +170,7 @@
     <section class="video-scroll-section" id="videoScrollSection">
         <div class="video-container-scroll">
             <video id="scrollVideo" muted loop playsinline>
+                <source src="video/ramen_video.mp4" type="video/mp4">
                 <source src="ramen_video.mp4" type="video/mp4">
                 Je browser ondersteunt geen video.
             </video>
@@ -176,7 +178,7 @@
     </section>
 
     <!-- Over Ons Sectie -->
-    <section class="about-section">
+    <section class="about-section" id="about">
         <div class="about-container">
             <div class="about-content">
                 <span class="section-label">私たちについて</span>
@@ -342,7 +344,7 @@
                     <span id="cartTotal">€0,00</span>
                 </div>
             </div>
-            <a href="checkout.php" class="checkout-btn">BESTELLEN</a>
+            <a href="checkout.html" class="checkout-btn">BESTELLEN</a>
         </div>
     </div>
 
@@ -356,15 +358,9 @@
             <div class="footer-column">
                 <h4>NAVIGATION</h4>
                 <a href="index.html">HOME</a>
-                <a href="#">ABOUT</a>
+                <a href="about.html">ABOUT</a>
                 <a href="menu.html">MENU</a>
-                <a href="#">DELIVERY</a>
-                <a href="#">JOBS</a>
-                <a href="#">GALLERY</a>
-                <a href="#">LOYALTY & GIFTCARD</a>
-                <a href="#">WEBSHOP</a>
-                <a href="#">LOCATIONS</a>
-                <a href="#">CONTACT</a>
+                <a href="contact.html">CONTACT</a>
                 <a href="account.html">BECOME A MEMBER</a>
             </div>
 
@@ -420,7 +416,9 @@
 
     <!-- Anime.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
-    <script src="public/js/cart.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="cart.js"></script>
+    <script src="js/script.js"></script>
     <script src="script.js"></script>
 </body>
 

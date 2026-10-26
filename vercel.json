@@ -1,0 +1,29 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/style.css", "destination": "/css/style.css" },
+    { "source": "/menu.css", "destination": "/css/menu.css" },
+    { "source": "/account.css", "destination": "/css/account.css" },
+    { "source": "/about.css", "destination": "/css/about.css" },
+    { "source": "/contact.css", "destination": "/css/contact.css" },
+    { "source": "/checkout.css", "destination": "/css/checkout.css" },
+    { "source": "/customize.css", "destination": "/css/customize.css" },
+    { "source": "/script.js", "destination": "/js/script.js" },
+    { "source": "/menu.js", "destination": "/js/menu.js" },
+    { "source": "/account.js", "destination": "/js/account.js" },
+    { "source": "/cart.js", "destination": "/js/cart.js" },
+    { "source": "/checkout.js", "destination": "/js/checkout.js" },
+    { "source": "/customize.js", "destination": "/js/customize.js" },
+    { "source": "/public/js/cart.js", "destination": "/js/cart.js" },
+    { "source": "/public/js/script.js", "destination": "/js/script.js" },
+    { "source": "/public/css/style.css", "destination": "/css/style.css" },
+    { "source": "/ramen_video.mp4", "destination": "/video/ramen_video.mp4" },
+    { "source": "/index.php", "destination": "/index.html" },
+    { "source": "/menu.php", "destination": "/menu.html" },
+    { "source": "/about.php", "destination": "/about.html" },
+    { "source": "/contact.php", "destination": "/contact.html" },
+    { "source": "/account.php", "destination": "/account.html" },
+    { "source": "/checkout.php", "destination": "/checkout.html" }
+  ]
+}

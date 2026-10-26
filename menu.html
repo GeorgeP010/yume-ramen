@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - Yume Ramen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="menu.css">
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Noto+Sans+JP:wght@700&display=swap"
         rel="stylesheet">
@@ -25,10 +27,19 @@
         <ul class="nav-links">
             <li><a href="index.html">HOME</a></li>
             <li><a href="menu.html" class="active">MENU</a></li>
-            <li><a href="#">STORY</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
         </ul>
 
-        <a href="#" class="nav-btn">BESTELLEN</a>
+        <a href="menu.html" class="nav-btn">BESTELLEN</a>
+
+        <!-- Account Icon -->
+        <a href="account.html" class="account-icon" aria-label="Account">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+        </a>
 
         <!-- Hamburger Menu Button -->
         <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -46,11 +57,10 @@
         <button class="nav-menu-close" id="navMenuClose">✕</button>
         <nav class="fullscreen-nav">
             <a href="index.html" class="nav-menu-link">HOME</a>
-            <a href="menu.html" class="nav-menu-link">MENU</a>
-            <a href="index.html#about" class="nav-menu-link">ABOUT</a>
-            <a href="#" class="nav-menu-link special">BESTELLEN</a>
-            <a href="#" class="nav-menu-link">GALLERY</a>
-            <a href="#" class="nav-menu-link">CONTACT</a>
+            <a href="menu.html" class="nav-menu-link active">MENU</a>
+            <a href="about.html" class="nav-menu-link">ABOUT</a>
+            <a href="contact.html" class="nav-menu-link">CONTACT</a>
+            <a href="account.html" class="nav-menu-link">ACCOUNT</a>
         </nav>
 
         <div class="nav-menu-footer">
@@ -584,7 +594,7 @@
                     <span id="cartTotal">€0,00</span>
                 </div>
             </div>
-            <a href="checkout.php" class="checkout-btn">BESTELLEN</a>
+            <a href="checkout.html" class="checkout-btn">BESTELLEN</a>
         </div>
     </div>
 
@@ -620,7 +630,12 @@
     </div>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+    <script src="js/script.js"></script>
     <script src="script.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="cart.js"></script>
+    <script src="js/menu.js"></script>
     <script src="menu.js"></script>
 </body>
 
